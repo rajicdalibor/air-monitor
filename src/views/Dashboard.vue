@@ -1,10 +1,18 @@
 <template>
-<div>Dashboard page</div>
+<div>
+  <RandomChart />
+</div>
 </template>
 
 <script>
+import { Bar } from 'vue-chartjs'
+import RandomChart from "@/components/RandomChart";
+
 export default {
-name: "Dashboard"
+  components: {RandomChart},
+  extends: Bar,
+  name: "Dashboard",
+
 }
 </script>
 
