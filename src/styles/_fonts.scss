@@ -1,0 +1,25 @@
+@import "variables";
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/futuraLight.eot');
+  src: url('fonts/futuraLight.eot?#iefix') format('embedded-opentype'), url('fonts/futuraLight.woff') format('woff'), url('fonts/futuraLight.woff2') format('woff2'), url('fonts/futuraLight.ttf') format('truetype');
+  font-weight: $font-weight-thin;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/futuraBold.eot');
+  src: url('fonts/futuraBold.eot?#iefix') format('embedded-opentype'), url('fonts/futuraBold.woff') format('woff'), url('fonts/futuraBold.woff2') format('woff2'), url('fonts/futuraBold.ttf') format('truetype');
+  font-weight: $font-weight-bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/futura.eot');
+  src: url('fonts/futura.eot?#iefix') format('embedded-opentype'), url('fonts/futura.woff') format('woff'), url('fonts/futura.woff2') format('woff2'), url('fonts/futura.ttf') format('truetype');
+  font-weight: $font-weight-regular;
+  font-style: normal;
+}
