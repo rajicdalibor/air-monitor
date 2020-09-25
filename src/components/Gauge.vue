@@ -7,7 +7,7 @@
       :separator-step="10"
       :min="0"
       :max="400"
-      gauge-color="#8CDFAD"
+      :gauge-color="[{ offset: 0, color: '#fff800' }, { offset: 100, color: '#ffab00'}, { offset: 100, color: '#ff2600' }]"
       :scale-interval="0.1"
   />
 </div>

@@ -1,19 +1,22 @@
 <template>
-  <div class="ma-10 pa-10">
+  <div class="ma-5 pa-10">
   <v-carousel
       cycle
-      height="400"
+      height="700"
       hide-delimiter-background
       show-arrows-on-hover
-      delimiter-icon="mdi-minus"
+      light
   >
     <v-carousel-item
         v-for="(slide, i) in slides"
         :key="i"
+        light
     >
       <v-sheet
-          color="white"
           height="100%"
+          color="white"
+          class="pa-4 sheet"
+          light
       >
         <v-row
             align="left"
@@ -26,7 +29,7 @@
           </v-col>
         </v-row>
         <v-row
-            class="fill-height"
+            class="ma-5 70%"
             align="center"
             justify="center"
         >
@@ -35,6 +38,39 @@
           </v-col>
           <v-col cols="6">
             <div class="air-text">Air quality looks good. You can stay outside without any restrictions</div>
+          </v-col>
+        </v-row>
+        <v-row
+            align="left"
+            justify="center"
+            class="ml-5"
+        >
+          <v-col cols="6">
+            <checkmark />
+            <div class="mt-3 air-values">77</div>
+            <div class="mt-3 value-name">Air quality</div>
+          </v-col>
+          <v-col cols="6">
+            <bad-icon />
+            <div class="mt-3 air-values">77</div>
+            <div class="mt-3 value-name">Humidity</div>
+          </v-col>
+        </v-row>
+        <v-row
+            align="left"
+            justify="center"
+            style="height: 50px"
+            class="ml-5"
+        >
+          <v-col cols="6">
+            <checkmark />
+            <div class="mt-3 air-values">77</div>
+            <div class="mt-3 value-name">Air pressure</div>
+          </v-col>
+          <v-col cols="6">
+            <bad-icon />
+            <div class="mt-3 air-values">77</div>
+            <div class="mt-3 value-name">Temperature</div>
           </v-col>
         </v-row>
       </v-sheet>
@@ -46,9 +82,11 @@
 <script>
 import Gauge from '../components/Gauge';
 import {CITIES} from "@/constants/constants";
+import Checkmark from "@/components/Checkmark";
+import BadIcon from "@/components/BadIcon";
 export default {
 name: "CityCard",
-  components: { Gauge },
+  components: {BadIcon, Checkmark, Gauge },
     data () {
       return {
         colors: [
@@ -78,5 +116,16 @@ name: "CityCard",
    font-family: Futura !important;
    font-size: 32px !important;
    color: #2e384d;
+ }
+ .sheet {
+   max-width: 640px;
+ }
+ .air-values {
+   font-size: 34px;
+   color: #2e384d;
+ }
+ .value-name {
+   font-size: 15px;
+   color: #8798ad;
  }
 </style>
